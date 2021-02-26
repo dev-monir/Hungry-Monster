@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="meal-wrapper">
+        <div class="meal-wrapper" id="wrapper">
             <div class="meal-search">
                 <h2 class="title">Find meal for your ingredients</h2>
                 <blockquote>Real food doesn't have ingredients, real food is ingredients <br>
@@ -38,12 +38,16 @@
                    
                 </div>
             </div>
+            
+        </div>
+        <div id="hide-show" style="display: none;">
             <div id="showRecipes">
                 
             </div>
             <div id="ingredients">
                 
             </div>
+            <button id="recipe-close-btn" onclick="btnClose()">Back</button>
         </div>
     </div>
     <script src="app.js"></script>

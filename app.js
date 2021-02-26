@@ -1,14 +1,18 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
-const recipeCloseBtn = document.getElementById('recipe-close-btn');
+/*const recipeCloseBtn = document.getElementById('recipe-close-btn');*/
 // event listener
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-})
-
+/*recipeCloseBtn.addEventListener('click', () => {
+    console.log("back");
+    
+})*/
+function btnClose() {
+    document.getElementById("hide-show").style.display="none";
+    document.getElementById("wrapper").style.display="block"; 
+}
 // get meal list 
 
 function getMealList() {
@@ -43,6 +47,8 @@ function getMealList() {
 
 // get meal recipe
 function getMealRecipe(e) {
+    document.getElementById("hide-show").style.display="block";
+    document.getElementById("wrapper").style.display="none";
     e.preventDefault();
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
@@ -56,10 +62,6 @@ function getMealRecipe(e) {
 // create meals 
 function mealRecipeModal(meal) {
     meal = meal[0];
-    console.log(meal);
-
-    //ss = "strIngredient"+"1"
-    //console.log(meal[ss]);
     let ingredient = "";
 
     for (let i = 1; i <= 20; i++) {
