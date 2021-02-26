@@ -222,11 +222,17 @@ body{
 .recipe-instruct{
     padding: 1rem 0;
 }
+.ingredient-list{
+    margin-left: 20%;
+    padding: 40px 10px;
+}
 .recipe-meal-img img{
-    width: 50%;
+    width: 588px;
+    height: 328px;
     display: block;
     border-radius: 1rem;
-    margin: auto;
+    margin-left: 20%;
+
 }
 .recipe-link{
     margin: 1.4 rem;
@@ -239,6 +245,12 @@ body{
 }
 .recipe-link a:hover{
     opacity: 0.8;
+}
+.hide-show{
+    width: 80%;
+    margin: auto;
+    padding: 100px 0px;
+    
 }
 
 /* media queries */

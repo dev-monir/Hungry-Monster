@@ -72,7 +72,9 @@ function mealRecipeModal(meal) {
         }
         //console.log(ss);
         ingredient = ingredient + `
-        <p">
+
+        
+        <p>
         ${mealMeasure} ${mealIngredient}
         </p>
         `;
@@ -83,11 +85,6 @@ function mealRecipeModal(meal) {
     <h2 class="recipe-title">${meal.strMeal}</h2>
     <p class="recipe-category">${meal.strCategory}
     </p>
-    <div class="recipe-instruct">
-        <h3>Instructions:</h3>
-        <p id="meal-recipe">${meal.strInstructions}
-        </p>
-    </div>
     <div class="recipe-meal-img">
         <img src="${meal.strMealThumb}" alt="">
     </div>
